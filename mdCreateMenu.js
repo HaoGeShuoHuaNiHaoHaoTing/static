@@ -34,7 +34,7 @@
     '<div id="menu" style="display: flex; overflow: hidden;">' +
 
     '<div style="width: ' + leftWidth + 'px;flex-shrink: 0;">' +
-      '<div style="position:fixed; top:0;left:0;right:'+leftWidth+';height: 100vh;overflow:auto;font-size:14px;padding-top: 20px;">' +
+      '<div style="position:fixed; top:0;left:0;width:'+leftWidth+'px;height: 100vh;overflow:auto;font-size:14px;padding-top: 20px;">' +
         hListDomeString +
       '</div>' +
       
