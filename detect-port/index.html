@@ -1,0 +1,535 @@
+<!DOCTYPE html><html><head>
+      <title>index</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\zhangjingfa6\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  padding: 0 20px!important;
+}
+pre[class*="language-javascript"] {
+  line-height: 1.6;
+  background: #282c34;
+  color: #FFF;
+}
+.token.char {
+  color: #D8DEE9;
+}
+.token.comment {
+  color: #B2B2B2;
+}
+.token.keyword {
+  color: #c5a5c5;
+}
+.token.lineHighlight {
+  color: #353b45;
+}
+.token.primitive {
+  color: #5a9bcf;
+}
+.token.string {
+  color: #8dc891;
+}
+.token.variable {
+  color: #d7deea;
+}
+.token.boolean {
+  color: #ff8b50;
+}
+.token.punctuation {
+  color: #88C6BE;
+}
+.token.tag {
+  color: #fc929e;
+}
+.token.function {
+  color: #79b6f2;
+}
+.token.className {
+  color: #FAC863;
+}
+.token.method {
+  color: #6699CC;
+}
+.token.operator {
+  color: #fc929e;
+}
+.token.class-name {
+  color: #fac863;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E5%A6%82%E4%BD%95%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E5%8F%AF%E7%94%A8%E7%AB%AF%E5%8F%A3%E5%8F%B7">&#x5982;&#x4F55;&#x81EA;&#x52A8;&#x83B7;&#x53D6;&#x53EF;&#x7528;&#x7AEF;&#x53E3;&#x53F7;</h1>
+
+<h2 class="mume-header" id="%E7%81%B5%E9%AD%82%E6%8B%B7%E9%97%AE">&#x7075;&#x9B42;&#x62F7;&#x95EE;</h2>
+
+<p>create-reate-app &#x751F;&#x6210;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x5728;&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;&#x7AEF;&#x53E3;&#x53F7;&#x88AB;&#x5360;&#x7528;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5207;&#x6362;&#x5230;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684;&#x65B0;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x8FD9;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7684;&#xFF1F;</p>
+<h2 class="mume-header" id="detect-port">detect-port</h2>
+
+<p>detect-port &#x5E93;&#xFF0C;&#x7528; JavaScript &#x5B9E;&#x73B0;&#x7684;&#x7AEF;&#x53E3;&#x68C0;&#x6D4B;&#x5668;&#x3002;</p>
+<p>&#x5728; create-react-app &#x4E2D;&#xFF0C;&#x542F;&#x52A8;&#x9879;&#x76EE;&#x65F6;&#x4F7F;&#x7528;&#x7684; react-scripts &#x5E93;&#x4E2D;&#xFF0C;&#x5C31;&#x7528;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x5E93;&#xFF0C;&#x5F53;&#x9ED8;&#x8BA4; 3000 &#x7AEF;&#x53E3;&#x53F7;&#x88AB;&#x5360;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x8BE2;&#x95EE;&#x662F;&#x5426;&#x4F7F;&#x7528; 3001 &#x505A;&#x7AEF;&#x53E3;&#x53F7;&#xFF1F;&#x8FD9;&#x662F;&#x600E;&#x4E48;&#x505A;&#x5230;&#x7684;&#x5462;&#xFF1F;</p>
+<h2 class="mume-header" id="detect-port-%E7%9A%84%E4%BD%BF%E7%94%A8">detect-port &#x7684;&#x4F7F;&#x7528;</h2>
+
+<p>&#x4F7F;&#x7528;&#x4ED6;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<h4 class="mume-header" id="1-%E5%91%BD%E4%BB%A4%E8%A1%8C">1. &#x547D;&#x4EE4;&#x884C;</h4>
+
+<p>&#x5168;&#x5C40;&#x5B89;&#x88C5;</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">$ npm i detect<span class="token operator">-</span>port <span class="token operator">-</span>g
+</pre><p>&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"># &#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x7684;&#x53EF;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#x53F7;
+$ detect
+
+# &#x68C0;&#x6D4B;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x53F7;
+$ detect <span class="token number">80</span>
+
+# &#x5728;&#x547D;&#x4EE4;&#x540E;&#x589E;&#x52A0; <span class="token operator">--</span>verbose &#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x8BE6;&#x60C5;&#x7684;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;
+$ detect <span class="token operator">--</span>verbose <span class="token comment">// get available port 23577 randomly</span>
+
+# &#x66F4;&#x591A;&#x5E2E;&#x52A9;
+$ detect <span class="token operator">--</span>help
+</pre><h4 class="mume-header" id="2%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8">2.&#x51FD;&#x6570;&#x8C03;&#x7528;</h4>
+
+<p>&#x672C;&#x5730;&#x5B89;&#x88C5;</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">$ npm i detect<span class="token operator">-</span>port <span class="token operator">--</span>save
+</pre><ol>
+<li>&#x4F7F;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+</ol>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-const">const</span> detect <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;detect-port&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">detect</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> _port</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">// _port &#x662F;&#x5F97;&#x5230;&#x7684;&#x53EF;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x53EF;&#x80FD;&#x4E0E; port &#x4E0D;&#x4E00;&#x81F4;</span>
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>port <span class="token operator">==</span> _port<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">port: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> was not occupied</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-else">else</span> <span class="token punctuation">{</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">port: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> was occupied, try port: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>_port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><ol start="2">
+<li>&#x4F7F;&#x7528; yield &#x8BED;&#x6CD5;</li>
+</ol>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-const">const</span> co <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;co&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">co</span><span class="token punctuation">(</span><span class="token keyword keyword-function">function</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> _port <span class="token operator">=</span> <span class="token keyword control-flow keyword-yield">yield</span> <span class="token function">detect</span><span class="token punctuation">(</span>port<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// _port &#x662F;&#x5F97;&#x5230;&#x7684;&#x53EF;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x53EF;&#x80FD;&#x4E0E; port &#x4E0D;&#x4E00;&#x81F4;</span>
+
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>port <span class="token operator">==</span> _port<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">port: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> was not occupied</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-else">else</span> <span class="token punctuation">{</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">port: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> was occupied, try port: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>_port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><ol start="3">
+<li>&#x4F7F;&#x7528; promise</li>
+</ol>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function">detect</span><span class="token punctuation">(</span>port<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token method function property-access">then</span><span class="token punctuation">(</span><span class="token parameter">_port</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">// _port &#x662F;&#x5F97;&#x5230;&#x7684;&#x53EF;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x53EF;&#x80FD;&#x4E0E; port &#x4E0D;&#x4E00;&#x81F4;</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>port <span class="token operator">==</span> _port<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">port: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> was not occupied</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-else">else</span> <span class="token punctuation">{</span>
+      <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">port: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> was occupied, try port: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>_port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token keyword control-flow keyword-catch">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><h2 class="mume-header" id="%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86">&#x5B9E;&#x73B0;&#x539F;&#x7406;</h2>
+
+<p>&#x6765;&#x770B;&#x770B;&#x91CC;&#x9762;&#x7684;&#x6E90;&#x7801;&#x5427;&#xFF0C;&#x770B;&#x770B;&#x662F;&#x600E;&#x4E48;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x53EF;&#x7528;&#x7684;&#xFF1F;&#x5F53;&#x524D;&#x7AEF;&#x53E3;&#x53F7;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x53C8;&#x600E;&#x4E48;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x53EF;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#xFF1F;</p>
+<p>&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x53C2;&#x6570;&#x5904;&#x7406;</p>
+<p>port&#xFF0C;host&#xFF0C;callback &#x90FD;&#x662F;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x3002;</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">module<span class="token punctuation">.</span><span class="token method-variable function-variable method function property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">port<span class="token punctuation">,</span> host<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-typeof">typeof</span> port <span class="token operator">===</span> <span class="token string">&apos;function&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    callback <span class="token operator">=</span> port<span class="token punctuation">;</span>
+    port <span class="token operator">=</span> <span class="token keyword null nil keyword-null">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-else">else</span> <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-typeof">typeof</span> host <span class="token operator">===</span> <span class="token string">&apos;function&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    callback <span class="token operator">=</span> host<span class="token punctuation">;</span>
+    host <span class="token operator">=</span> <span class="token keyword null nil keyword-null">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  port <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>port<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// &#x7AEF;&#x53E3;&#x53F7;&#x9ED8;&#x8BA4;&#x662F; 0</span>
+  <span class="token keyword keyword-let">let</span> maxPort <span class="token operator">=</span> port <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>maxPort <span class="token operator">&gt;</span> <span class="token number">65535</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// &#x5BF9;&#x7AEF;&#x53E3;&#x53F7;&#x505A;&#x6700;&#x5927;&#x9650;&#x5236;</span>
+    maxPort <span class="token operator">=</span> <span class="token number">65535</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">&apos;detect free port between [%s, %s)&apos;</span><span class="token punctuation">,</span> port<span class="token punctuation">,</span> maxPort<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-typeof">typeof</span> callback <span class="token operator">===</span> <span class="token string">&apos;function&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// callback &#x5982;&#x679C;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x8FD4;&#x56DE;&#x3002;</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token function">tryListen</span><span class="token punctuation">(</span>host<span class="token punctuation">,</span> port<span class="token punctuation">,</span> maxPort<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// promise</span>
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">// callback &#x5982;&#x679C;&#x4E0D;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x7528; promise &#x7684;&#x65B9;&#x5F0F;&#x8FD4;&#x56DE;&#x3002;</span>
+    <span class="token function">tryListen</span><span class="token punctuation">(</span>host<span class="token punctuation">,</span> port<span class="token punctuation">,</span> maxPort<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">error<span class="token punctuation">,</span> realPort</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-else">else</span> <span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span>realPort<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</pre><p>&#x505A;&#x68C0;&#x67E5;&#x7AEF;&#x53E3;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5728; tryListen &#x4E2D;&#xFF1A;</p>
+<p>&#x5728; tryListen &#x4E2D;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86; handleError &#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x7AEF;&#x53E3;&#x53F7;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5C31;&#x4F1A;&#x8FDB;&#x5165;&#x6B64;&#x51FD;&#x6570;&#xFF0C;<strong>&#x5C06;&#x7AEF;&#x53E3;&#x53F7; +1</strong>&#xFF0C;&#x518D;&#x7EE7;&#x7EED;&#x4F7F;&#x7528; tryListen &#x68C0;&#x6D4B;&#x65B0;&#x7AEF;&#x53E3;&#x53F7;&#x662F;&#x5426;&#x53EF;&#x7528;&#x3002;</p>
+<p>&#x5FAA;&#x73AF;&#x5F80;&#x590D;~</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-function">function</span> <span class="token function">tryListen</span><span class="token punctuation">(</span><span class="token parameter">host<span class="token punctuation">,</span> port<span class="token punctuation">,</span> maxPort<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-function">function</span> <span class="token function">handleError</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    port<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>port <span class="token operator">&gt;=</span> maxPort<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">debug</span><span class="token punctuation">(</span>
+        <span class="token string">&apos;port: %s &gt;= maxPort: %s, give up and use random port&apos;</span><span class="token punctuation">,</span>
+        port<span class="token punctuation">,</span>
+        maxPort
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      port <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      maxPort <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">tryListen</span><span class="token punctuation">(</span>host<span class="token punctuation">,</span> port<span class="token punctuation">,</span> maxPort<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 1. check specified host (or null)</span>
+  <span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> host<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> realPort</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ignore random listening</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>port <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow keyword-return">return</span> <span class="token function">callback</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> realPort<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow keyword-return">return</span> <span class="token function">handleError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 2. check default host</span>
+    <span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-return">return</span> <span class="token function">handleError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">// 3. check localhost</span>
+      <span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token string">&apos;localhost&apos;</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword control-flow keyword-return">return</span> <span class="token function">handleError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// 4. check current ip</span>
+        <span class="token keyword keyword-let">let</span> ip<span class="token punctuation">;</span>
+        <span class="token keyword control-flow keyword-try">try</span> <span class="token punctuation">{</span>
+          ip <span class="token operator">=</span> address<span class="token punctuation">.</span><span class="token method function property-access">ip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-catch">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// Skip the `ip` check if `address.ip()` fails</span>
+          <span class="token keyword control-flow keyword-return">return</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span> realPort<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> ip<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> realPort</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword control-flow keyword-return">return</span> <span class="token function">handleError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+
+          <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span> realPort<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>listen &#x51FD;&#x6570;&#xFF0C;&#x662F;&#x7528;&#x6765;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x53EF;&#x7528;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684; tryListen &#x4E2D;&#xFF0C;&#x5D4C;&#x5957;&#x4E86;&#x56DB;&#x5C42; listen&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x540C;&#x4E00; port&#xFF0C;&#x4E0D;&#x540C; host &#x7684;&#x573A;&#x666F;&#xFF0C;&#x505A;&#x68C0;&#x6D4B;&#xFF1A;</p>
+<ol>
+<li>port, host</li>
+<li>port, null</li>
+<li>port, &apos;localhost&apos;</li>
+<li>port, ip</li>
+</ol>
+<p>&#x53EA;&#x6709;&#x5F53;&#x4E0A;&#x9762;&#x56DB;&#x79CD;&#x573A;&#x666F;&#xFF0C;&#x90FD;&#x68C0;&#x6D4B;&#x901A;&#x8FC7;&#x540E;&#xFF0C;&#x624D;&#x7B97;&#x6210;&#x529F;&#x3002;</p>
+<p>&#x82E5;&#x6709;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#x5931;&#x8D25;&#xFF0C;&#x5C31;&#x4F1A;&#x8FDB;&#x5165; handleError &#x4E2D;&#xFF0C;port + 1&#xFF0C;&#x518D;&#x6B21;&#x5FAA;&#x73AF;&#x68C0;&#x6D4B;&#x3002;</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-function">function</span> <span class="token function">listen</span><span class="token punctuation">(</span><span class="token parameter">port<span class="token punctuation">,</span> hostname<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> server <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">net<span class="token punctuation">.</span>Server</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  server<span class="token punctuation">.</span><span class="token method function property-access">on</span><span class="token punctuation">(</span><span class="token string">&apos;error&apos;</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">&apos;listen %s:%s error: %s&apos;</span><span class="token punctuation">,</span> hostname<span class="token punctuation">,</span> port<span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    server<span class="token punctuation">.</span><span class="token method function property-access">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">.</span><span class="token property-access">code</span> <span class="token operator">===</span> <span class="token string">&apos;ENOTFOUND&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">&apos;ignore dns ENOTFOUND error, get free %s:%s&apos;</span><span class="token punctuation">,</span> hostname<span class="token punctuation">,</span> port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword control-flow keyword-return">return</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span> port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token function">callback</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  server<span class="token punctuation">.</span><span class="token method function property-access">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> hostname<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    port <span class="token operator">=</span> server<span class="token punctuation">.</span><span class="token method function property-access">address</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">port</span><span class="token punctuation">;</span>
+    server<span class="token punctuation">.</span><span class="token method function property-access">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">&apos;get free %s:%s&apos;</span><span class="token punctuation">,</span> hostname<span class="token punctuation">,</span> port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span> port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>listen &#x662F;&#x4F7F;&#x7528; nodeJs &#x4E2D; net &#x6A21;&#x5757;&#xFF0C;&#x6765;&#x5224;&#x65AD;&#x7AEF;&#x53E3;&#x53F7;&#x662F;&#x5426;&#x53EF;&#x7528;</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-const">const</span> server <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">net<span class="token punctuation">.</span>Server</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p>server.listen &#x5982;&#x679C;&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x4F1A; return callback(null, port)&#xFF1B;</p>
+<p>&#x5982;&#x679C;&#x51FA;&#x9519;&#xFF0C;&#x5C31;&#x4F1A; return callback(err); &#x518D;&#x6B21;&#x8FDB;&#x5165; handleError &#x4E2D;&#xFF0C;&#x518D;&#x505A;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x5B8C;&#x7ED3;~</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
